@@ -8,6 +8,26 @@ public class Property {
         this.rent = rent;
     }
 
+    public String getName() {
+        return name;
+    }
+    public int getCost() {
+        return cost;
+    }
+    public int getRent() {
+        return rent;
+    }
+    public void buyProperty(Player player) {
+        if (player.deductMoney(cost)) {
+            player.addToPortfolio(this);
+        }
+    }
+
+
+
+
+
+
 
 
 }
