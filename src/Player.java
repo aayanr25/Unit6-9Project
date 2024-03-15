@@ -27,11 +27,13 @@ public class Player {
         netWorth += deposit;
     }
 
-    public void deductMoney(int money) {
+    public boolean deductMoney(int money) {
         if (netWorth >= money) {
             netWorth -= money;
+            return true;
         } else {
             System.out.println("Sorry, you dont have enough funds for that!");
+            return false;
         }
     }
 
@@ -40,8 +42,10 @@ public class Player {
     }
 
     public void removeFromPortfolio(Property property) {
-        for (Property prop : portfolio) {
-
+        for (int i = 0; i < portfolio.size(); i++) {
+            if (portfolio.get(i) == property) {
+                portfolio.remove(i);
+            }
         }
     }
 
