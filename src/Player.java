@@ -3,9 +3,9 @@ public class Player {
 
     private String name;
     private int netWorth;
-    private ArrayList<Property>[] portfolio;
+    private ArrayList<Property> portfolio;
 
-    public Player(String name, int netWorth, ArrayList<Property>[] portfolio) {
+    public Player(String name, int netWorth, ArrayList<Property> portfolio) {
         this.name = name;
         this.netWorth = netWorth;
         this.portfolio = portfolio;
@@ -19,7 +19,7 @@ public class Player {
         return netWorth;
     }
 
-    public ArrayList<Property>[] getPortfolio() {
+    public ArrayList<Property> getPortfolio() {
         return portfolio;
     }
 
@@ -35,5 +35,14 @@ public class Player {
         }
     }
 
+    public void addToPortfolio(Property property) {
+        portfolio.add(portfolio.size(), property);
+    }
+
+    public void removeFromPortfolio(Property property) {
+        for (Property prop : portfolio) {
+
+        }
+    }
 
 }
