@@ -10,7 +10,6 @@ public class Property {
         this.cost = cost;
         this.rent = rent;
         initializePropList();
-
     }
 
     public String getName() {
@@ -49,7 +48,7 @@ public class Property {
 
     private void initializePropList() {
         allProperties = new ArrayList<>();
-        allProperties.add(new Property("Grand Central", 600, 50));
+        allProperties.add(new Property("World Trade Center", 600, 50));
         allProperties.add(new Property("JFK Airport", 600, 50));
         allProperties.add(new Property("Broadway", 600, 50));
         allProperties.add(new Property("Brooklyn Tech", 500, 40));
@@ -69,13 +68,5 @@ public class Property {
         allProperties.add(new Property("Rocky's", 100, 5));
         allProperties.add(new Property("Pizza Parlor", 100, 5));
         allProperties.add(new Property("Toys-R-Us", 100, 5));
-
-
     }
-
-
-
-
-
-
 }
