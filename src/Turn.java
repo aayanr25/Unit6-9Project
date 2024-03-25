@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Turn {
     private boolean isGameOver = false;
     private ArrayList<Property> allProperties;
+    private ArrayList<ChanceCard> chanceCards;
     private int d1;
     private int d2;
     private int doubles;
@@ -103,5 +104,9 @@ public class Turn {
             }
         }
         return null;
+    }
+
+    private void chance(Player player) {
+
     }
 }
