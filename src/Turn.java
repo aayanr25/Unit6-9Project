@@ -10,7 +10,7 @@ public class Turn {
     private int doubles;
     private Player player;
     private Scanner scan;
-    private String[][] board;
+    private Property[][] board;
     private ArrayList<Player> playerList = new ArrayList<>();
 
 
@@ -29,6 +29,11 @@ public class Turn {
 
     }
 
+    private void menu() {
+        System.out.println("It's your turn, " + player.getName());
+
+    }
+
     private int getRoll() {
         d1 = (int) (Math.random() * 6) + 1;
         d2 = (int) (Math.random() * 6) + 1;
@@ -44,21 +49,28 @@ public class Turn {
     }
 
     private void setupBoard() {
-        board = new String[9][9];
+        board = new Property[9][9];
         for (int i = 1; i < board.length - 1; i++) {
             for (int j = 1; j < board[0].length - 1; j++) {
-                board[i][j] = "X";
+                board[i][j] = new EmptySpace();
             }
         }
-
         initializePropList();
+        int idx = 0;
+        for (int i = board.length - 1; i > 0; i--) {
+            board[0][i] = allProperties.get(idx);
+            idx++;
+        }
+        board[0][0] = new Jail();
+
+
         
     }
-
-    private void menu() {
-        System.out.println("It's your turn, " + player.getName());
+    private void printBoard() {
 
     }
+
+
 
     private void initializePropList() {
         allProperties = new ArrayList<>();
@@ -82,5 +94,14 @@ public class Turn {
         allProperties.add(new Property("Rocky's", 100, 5));
         allProperties.add(new Property("Pizza Parlor", 100, 5));
         allProperties.add(new Property("Toys-R-Us", 100, 5));
+    }
+
+    public Property getProperty(String propName) {
+        for (Property prop : allProperties) {
+            if (prop.getName().equals(propName)) {
+                return prop;
+            }
+        }
+        return null;
     }
 }

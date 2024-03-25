@@ -32,13 +32,9 @@ public class Property {
         return player.deductMoney(rent);
     }
 
-    public Property getProperty(String propName) {
-        for (Property prop : allProperties) {
-            if (prop.getName().equals(propName)) {
-                return prop;
-            }
-        }
-        return null;
+
+    public String toString() {
+        return name;
     }
 
 
