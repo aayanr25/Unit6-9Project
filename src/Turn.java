@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Turn {
     private boolean isGameOver = false;
     private ArrayList<Property> allProperties;
-    private ArrayList<ChanceCard> chanceCards;
+    private ArrayList<ChanceCards> chanceCards;
     private int d1;
     private int d2;
     private int doubles;
@@ -58,10 +58,11 @@ public class Turn {
         }
         initializePropList();
         int idx = 0;
-        for (int i = board.length - 1; i > 0; i--) {
+        for (int i = board.length - 2; i > 0; i--) {
             board[0][i] = allProperties.get(idx);
             idx++;
         }
+        board[board.length - 1][0] = new Property("GO", 0,0);
         board[0][0] = new Jail();
 
 
