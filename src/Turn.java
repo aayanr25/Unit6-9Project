@@ -58,12 +58,12 @@ public class Turn {
         }
         initializePropList();
         int idx = 0;
-        for (int i = board.length - 2; i > 0; i--) {
-            board[0][i] = allProperties.get(idx);
-            idx++;
-        }
-        board[board.length - 1][0] = new Property("GO", 0,0);
-        board[0][0] = new Jail();
+
+        board[0][0] = new Property("GO", 0, 0);
+        board[0][1] = allProperties.get(0);
+        board[0][2] = allProperties.get(1);
+        board[0][3] = new ChanceCards(  );
+
 
 
         
@@ -76,26 +76,26 @@ public class Turn {
 
     private void initializePropList() {
         allProperties = new ArrayList<>();
-        allProperties.add(new Property("World Trade Center", 600, 50));
-        allProperties.add(new Property("JFK Airport", 600, 50));
-        allProperties.add(new Property("Broadway", 600, 50));
-        allProperties.add(new Property("Brooklyn Tech", 500, 40));
-        allProperties.add(new Property("Brighton Boardwalk", 500, 40));
-        allProperties.add(new Property("Rockaway Beach", 500, 40));
-        allProperties.add(new Property("The Met", 450, 35));
-        allProperties.add(new Property("Bronx Zoo", 400, 30));
-        allProperties.add(new Property("Coney Island", 400, 30));
-        allProperties.add(new Property("Bryant Park Library", 400, 30));
-        allProperties.add(new Property("Coney Island Aquarium", 300, 20));
-        allProperties.add(new Property("Rockefeller Plaza", 300, 20));
-        allProperties.add(new Property("AMC Times Square", 300, 20));
-        allProperties.add(new Property("La Bagel", 250, 15));
-        allProperties.add(new Property("Dave & Busters", 200, 10));
-        allProperties.add(new Property("The Strand Bookstore", 200, 10));
-        allProperties.add(new Property("Petco", 200, 10));
-        allProperties.add(new Property("Rocky's", 100, 5));
-        allProperties.add(new Property("Pizza Parlor", 100, 5));
-        allProperties.add(new Property("Toys-R-Us", 100, 5));
+        allProperties.add(0, new Property("World Trade Center", 600, 50));
+        allProperties.add(0, new Property("JFK Airport", 600, 50));
+        allProperties.add(0, new Property("Broadway", 600, 50));
+        allProperties.add(0, new Property("Brooklyn Tech", 500, 40));
+        allProperties.add(0, new Property("Brighton Boardwalk", 500, 40));
+        allProperties.add(0, new Property("Rockaway Beach", 500, 40));
+        allProperties.add(0, new Property("The Met", 450, 35));
+        allProperties.add(0, new Property("Bronx Zoo", 400, 30));
+        allProperties.add(0, new Property("Coney Island", 400, 30));
+        allProperties.add(0, new Property("Bryant Park Library", 400, 30));
+        allProperties.add(0, new Property("Coney Island Aquarium", 300, 20));
+        allProperties.add(0, new Property("Rockefeller Plaza", 300, 20));
+        allProperties.add(0, new Property("AMC Times Square", 300, 20));
+        allProperties.add(0, new Property("La Bagel", 250, 15));
+        allProperties.add(0, new Property("Dave & Busters", 200, 10));
+        allProperties.add(0, new Property("The Strand Bookstore", 200, 10));
+        allProperties.add(0, new Property("Petco", 200, 10));
+        allProperties.add(0, new Property("Rocky's", 100, 5));
+        allProperties.add(0, new Property("Pizza Parlor", 100, 5));
+        allProperties.add(0, new Property("Toys-R-Us", 100, 5));
     }
 
     public Property getProperty(String propName) {

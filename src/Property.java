@@ -4,6 +4,7 @@ public class Property {
     private String name;
     private int cost;
     private int rent;
+    private boolean isOwned;
     private ArrayList<Property> allProperties;
     public Property(String name, int cost, int rent) {
         this.name = name;
@@ -20,6 +21,9 @@ public class Property {
     }
     public int getRent() {
         return rent;
+    }
+    public boolean isOwned() {
+        return isOwned;
     }
     public boolean buyProperty(Player player) {
         if (player.deductMoney(cost)) {
