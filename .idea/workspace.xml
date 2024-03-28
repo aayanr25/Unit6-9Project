@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property.java" afterDir="false" />
+    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="started board">
       <change beforePath="$PROJECT_DIR$/src/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,11 +58,19 @@
       <option name="project" value="LOCAL" />
       <updated>1710506632605</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="started board">
+      <created>1711632190087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711632190087</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="started board" />
+    <option name="LAST_COMMIT_MESSAGE" value="started board" />
   </component>
 </project>

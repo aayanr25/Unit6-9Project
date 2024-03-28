@@ -12,10 +12,11 @@ public class Turn {
     private Player player;
     private Scanner scan;
     private Property[][] board;
-    private ArrayList<Player> playerList = new ArrayList<>();
+    private ArrayList<Player> playerList;
 
 
     public Turn() {
+        playerList = new ArrayList<>();
         scan = new Scanner(System.in);
         while (!isGameOver) {
             for (Player player : playerList) {
