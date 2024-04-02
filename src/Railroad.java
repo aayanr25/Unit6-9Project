@@ -9,6 +9,7 @@ public class Railroad extends Property {
     @Override
     public boolean buyProperty(Player player) {
         player.addRailroad();
-        super.buyProperty(player);
+        return super.buyProperty(player);
     }
+
 }
