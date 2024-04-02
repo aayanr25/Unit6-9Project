@@ -1,6 +1,8 @@
 public class Railroad extends Property {
-    private String blank;
-    public Railroad(String name, int cost, int rent) {
-        super(name, cost, rent);
+    private int rent;
+
+    public Railroad(String name, int cost) {
+        super(name, cost, 25);
+
     }
 }

@@ -1,6 +1,6 @@
 public class Jail extends Property {
 
     public Jail() {
-        super("Jail", 0, 0);
+        super("JAIL", 0, 0);
     }
 }
