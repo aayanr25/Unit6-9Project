@@ -1,6 +1,6 @@
 public class Jail extends Property {
 
     public Jail() {
-        super("JAIL", 0, 0);
+        super(ConsoleUtility.WHITE + "JAIL" + ConsoleUtility.RESET, 0, 0);
     }
 }

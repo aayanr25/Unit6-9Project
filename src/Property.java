@@ -32,6 +32,7 @@ public class Property {
         return false;
     }
     public boolean chargeRent(Player player) {
+
         return player.deductMoney(rent);
     }
 

@@ -19,13 +19,18 @@ public class Board {
 public void printBoard() {
     String cellFormat = "|%-40s"; // vertical bar on the outside, each box is 40 spaces.
     // where I learned how to do this: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Java-print-table-format-printf-chart-console-scanner-println-line
+    String colorCellFormat = "|%-51s";
     printBoardBorder();
 
     for (Property[] row : board) {
         for (Property property : row) {
+            if (property.getCost() == 0 && !(property.getName().equals("X"))) {
+                System.out.printf(colorCellFormat, property);
+            } else {
                 System.out.printf(cellFormat, property);
+            }
         }
-        System.out.println("|"); // closses the last cell of each row
+        System.out.println("|"); // closes the last cell of each row
         printBoardBorder(); // close bottom of box after each row
     }
 }
@@ -78,10 +83,10 @@ public void printBoard() {
         board[1][0] = allProperties.get(19);
 
 // corners
-        board[0][0] = new Property("GO", 0, 0);
+        board[0][0] = new Property(ConsoleUtility.GREEN + "GO" + ConsoleUtility.RESET, 0, 0);
         board[0][6] = new Jail();
-        board[6][0] = new Property("FREE PARKING", 0, 0);
-        board[6][6] = new Property("GO TO JAIL", 0, 0);
+        board[6][0] = new Property(ConsoleUtility.BLUE + "FREE PARKING" + ConsoleUtility.RESET, 0, 0);
+        board[6][6] = new Property(ConsoleUtility.RED + "GO TO JAIL" + ConsoleUtility.RESET, 0, 0);
     }
 
     private void initializePropList() {
@@ -106,6 +111,10 @@ public void printBoard() {
         allProperties.add(0, new Railroad("Stillwell Avenue Station", 250));
         allProperties.add(0, new Property("Rocky's", 100, 5));
         allProperties.add(0, new Property("Toys-R-Us", 100, 5));
+
+    }
+
+    public void GamePiece() {
 
     }
 }
