@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="move method">
+    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="started board">
+      <change afterPath="$PROJECT_DIR$/src/Chance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
@@ -100,6 +101,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="started board" />
     <MESSAGE value="board is done" />
+    <MESSAGE value="QoL change" />
+    <option name="LAST_COMMIT_MESSAGE" value="QoL change" />
     <MESSAGE value="move method" />
     <option name="LAST_COMMIT_MESSAGE" value="move method" />
   </component>
