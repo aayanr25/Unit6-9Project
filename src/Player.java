@@ -7,6 +7,7 @@ public class Player {
     private int xPos;
     private int yPos;
     private Turn game;
+    private int railroadsOwned;
 
     public Player(String name, int netWorth, ArrayList<Property> portfolio) {
         this.name = name;
@@ -31,8 +32,15 @@ public class Player {
     public int getX() {
         return xPos;
     }
+    public void setX(int x) {
+        xPos = x;
+    }
     public int getY() {
         return yPos;
+    }
+    public void setY(int y) {
+        yPos = y;
+
     }
 
     public void move(int roll) {
@@ -104,6 +112,13 @@ public class Player {
                 i--;
             }
         }
+    }
+
+    public void passGo() {
+        netWorth += 200;
+    }
+    public void addRailroad() {
+        railroadsOwned++;
     }
 
 }

@@ -66,4 +66,8 @@ public class Turn {
     private void chance(Player player) {
 
     }
+
+    public void passGo() {
+        player.addMoney(200);
+    }
 }

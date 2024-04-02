@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="board is done">
+    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="move method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Railroad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Railroad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +79,28 @@
       <option name="project" value="LOCAL" />
       <updated>1712060938803</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="board is done">
+      <created>1712061506403</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712061506403</updated>
+    </task>
+    <task id="LOCAL-00006" summary="move method">
+      <created>1712063629764</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712063629764</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="started board" />
     <MESSAGE value="board is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="board is done" />
+    <MESSAGE value="move method" />
+    <option name="LAST_COMMIT_MESSAGE" value="move method" />
   </component>
 </project>
