@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Board {
     private Property[][] board;
     private ArrayList<Property> allProperties;
+    private Player p1;
+    private Player p2;
     public Board() {
         board = new Property[7][7];
         setupBoard();
@@ -11,6 +13,9 @@ public class Board {
 
     public Property[][] getBoard() {
         return board;
+    }
+    public Property getPointOnBoard(int x, int y) {
+        return board[x][y];
     }
     public ArrayList<Property> getAllProperties() {
         return allProperties;
@@ -98,7 +103,7 @@ public void printBoard() {
         allProperties.add(0, new Property("Bryant Park Library", 400, 30));
         allProperties.add(0, new Property("Coney Island Aquarium", 300, 20));
         allProperties.add(0, new Property("Rockefeller Plaza", 300, 20));
-        allProperties.add(0, new Railroad("Atlantic Avenue-Barclays Center Station", 250));
+        allProperties.add(0, new Railroad("Atlantic Terminal", 250));
         allProperties.add(0, new Property("La Bagel", 250, 15));
         allProperties.add(0, new Property("Dave & Busters", 200, 10));
         allProperties.add(0, new Property("The Strand Bookstore", 200, 10));

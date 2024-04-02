@@ -25,6 +25,9 @@ public class Turn {
             }
         }
     }
+    public Board getBoard() {
+        return board;
+    }
 
     private void playTurn() {
         menu();
