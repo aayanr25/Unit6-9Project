@@ -86,24 +86,24 @@ public void printBoard() {
 
     private void initializePropList() {
         allProperties = new ArrayList<>();
-        allProperties.add(0, new Property("WorldTradeCenter", 600, 50));
-        allProperties.add(0, new Property("JFKAirport", 600, 50));
-        allProperties.add (0, new Railroad("GrandCentralStation", 250));
+        allProperties.add(0, new Property("World Trade Center", 600, 50));
+        allProperties.add(0, new Property("JFK Airport", 600, 50));
+        allProperties.add (0, new Railroad("Grand Central Station", 250));
         allProperties.add(0, new Property("Broadway", 50, 40));
-        allProperties.add(0, new Property("BrooklynTech", 500, 40));
-        allProperties.add(0, new Property("BrightonBoardwalk", 500, 40));
-        allProperties.add(0, new Property("TheMet", 450, 35));
-        allProperties.add(0, new Railroad("PennStation", 250));
-        allProperties.add(0, new Property("ConeyIsland", 400, 30));
-        allProperties.add(0, new Property("BryantParkLibrary", 400, 30));
-        allProperties.add(0, new Property("ConeyIslandAquarium", 300, 20));
-        allProperties.add(0, new Property("RockefellerPlaza", 300, 20));
-        allProperties.add(0, new Railroad("AtlanticAvenue-BarclaysCenterStation", 250));
-        allProperties.add(0, new Property("LaBagel", 250, 15));
-        allProperties.add(0, new Property("Dave&Busters", 200, 10));
-        allProperties.add(0, new Property("TheStrandBookstore", 200, 10));
+        allProperties.add(0, new Property("Brooklyn Tech", 500, 40));
+        allProperties.add(0, new Property("Brighton Boardwalk", 500, 40));
+        allProperties.add(0, new Property("The Met", 450, 35));
+        allProperties.add(0, new Railroad("Penn Station", 250));
+        allProperties.add(0, new Property("Coney Island", 400, 30));
+        allProperties.add(0, new Property("Bryant Park Library", 400, 30));
+        allProperties.add(0, new Property("Coney Island Aquarium", 300, 20));
+        allProperties.add(0, new Property("Rockefeller Plaza", 300, 20));
+        allProperties.add(0, new Railroad("Atlantic Avenue-Barclays Center Station", 250));
+        allProperties.add(0, new Property("La Bagel", 250, 15));
+        allProperties.add(0, new Property("Dave & Busters", 200, 10));
+        allProperties.add(0, new Property("The Strand Bookstore", 200, 10));
         allProperties.add(0, new Property("Petco", 200, 10));
-        allProperties.add(0, new Railroad("StillwellAvenueStation", 250));
+        allProperties.add(0, new Railroad("Stillwell Avenue Station", 250));
         allProperties.add(0, new Property("Rocky's", 100, 5));
         allProperties.add(0, new Property("Toys-R-Us", 100, 5));
 
