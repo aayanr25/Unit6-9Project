@@ -7,11 +7,13 @@ public class Player {
     private int xPos;
     private int yPos;
     private int railroadsOwned;
+    private boolean freeEscape;
 
     public Player(String name) {
         this.name = name;
         netWorth = 0;
         portfolio = new ArrayList<>();
+        freeEscape = false;
     }
 
     public String getName() {
@@ -23,6 +25,17 @@ public class Player {
     }
     public String toString() {
         return name;
+    }
+    public void setFreeEscape() {
+        if (freeEscape == false) {
+            freeEscape = true;
+        } else {
+            freeEscape = false;
+        }
+    }
+
+    public boolean escapeJail() {
+        return false;
     }
 
     public ArrayList<Property> getPortfolio() {
