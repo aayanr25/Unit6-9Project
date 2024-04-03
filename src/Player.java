@@ -6,13 +6,12 @@ public class Player {
     private ArrayList<Property> portfolio;
     private int xPos;
     private int yPos;
-    private Turn game;
     private int railroadsOwned;
 
-    public Player(String name, int netWorth, ArrayList<Property> portfolio) {
+    public Player(String name) {
         this.name = name;
-        this.netWorth = netWorth;
-        this.portfolio = portfolio;
+        netWorth = 0;
+        portfolio = new ArrayList<>();
     }
 
     public String getName() {
@@ -44,47 +43,20 @@ public class Player {
     }
 
     public void move(int roll) {
-        int num = 0;
-        while (num < roll) {
-            if (canMoveRight()) {
+        for (int num = 0; num < roll; num++) {
+            if (yPos == 0 && xPos < 6) {
                 xPos++;
-            } else if (canMoveDown()) {
+            }
+            else if (xPos == 6 && yPos < 6) {
                 yPos++;
-            } else if (canMoveLeft()) {
+            }
+            else if (yPos == 6 && xPos > 0) {
                 xPos--;
-            } else if (canMoveUp()) {
+            }
+            else if (xPos == 0 && yPos > 0) {
                 yPos--;
             }
-            num++;
         }
-    }
-    private boolean canMoveRight() {
-        Board board = game.getBoard();
-        if (xPos + 1 > 6 || board.getPointOnBoard(xPos + 1, yPos).getName().equals("X")) {
-            return false;
-        }
-        return true;
-    }
-    private boolean canMoveLeft() {
-        Board board = game.getBoard();
-        if (xPos - 1 < 0 || board.getPointOnBoard(xPos - 1, yPos).getName().equals("X")) {
-            return false;
-        }
-        return true;
-    }
-    private boolean canMoveUp() {
-        Board board = game.getBoard();
-        if (yPos - 1 < 0 || board.getPointOnBoard(xPos, yPos - 1).getName().equals("X")) {
-            return false;
-        }
-        return true;
-    }
-    private boolean canMoveDown() {
-        Board board = game.getBoard();
-        if (yPos + 1 > 6 || board.getPointOnBoard(xPos, yPos + 1).getName().equals("X")) {
-            return false;
-        }
-        return true;
     }
 
     public void addMoney(int deposit) {
@@ -96,7 +68,7 @@ public class Player {
             netWorth -= money;
             return true;
         } else {
-            System.out.println("Sorry, you dont have enough funds for that!");
+            System.out.println("Sorry, you don't have enough funds for that!");
             return false;
         }
     }

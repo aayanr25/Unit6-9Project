@@ -11,23 +11,20 @@ public class Turn {
     private Player player;
     private Scanner scan;
     private Board board;
-    private ArrayList<Player> playerList;
+
 
 
     public Turn() {
         board = new Board();
-        playerList = new ArrayList<>();
-        scan = new Scanner(System.in);
-        while (!isGameOver) {
-            for (Player player : playerList) {
-                this.player = player;
-                playTurn();
-            }
-        }
+        board.printBoard();
+//        while (!isGameOver) {
+//            for (Player player : setup.getPlayerList()) {
+//                this.player = player;
+//                playTurn();
+//            }
+//        }
     }
-    public Board getBoard() {
-        return board;
-    }
+
 
     private void playTurn() {
         menu();
@@ -52,6 +49,8 @@ public class Turn {
         }
         return d1 == d2;
     }
+
+
 
 
     public Property getProperty(String propName) {
