@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="got player tokens on board">
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Railroad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Railroad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
