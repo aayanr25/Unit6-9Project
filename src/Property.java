@@ -5,7 +5,6 @@ public class Property {
     private int cost;
     private int rent;
     private boolean isOwned;
-    private ArrayList<Property> allProperties;
     public Property(String name, int cost, int rent) {
         this.name = name;
         this.cost = cost;
@@ -21,18 +20,21 @@ public class Property {
     public int getRent() {
         return rent;
     }
+    public void setRent(int num) {
+        rent = num;
+    }
     public boolean isOwned() {
         return isOwned;
     }
     public boolean buyProperty(Player player) {
         if (player.deductMoney(cost)) {
             player.addToPortfolio(this);
+            isOwned = true;
             return true;
         }
         return false;
     }
     public boolean chargeRent(Player player) {
-
         return player.deductMoney(rent);
     }
 

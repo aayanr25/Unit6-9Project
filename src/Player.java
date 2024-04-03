@@ -41,6 +41,9 @@ public class Player {
         yPos = y;
 
     }
+    public int getRailroadsOwned() {
+        return railroadsOwned;
+    }
 
     public void move(int roll) {
         for (int num = 0; num < roll; num++) {
