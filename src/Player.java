@@ -8,9 +8,11 @@ public class Player {
     private int yPos;
     private int railroadsOwned;
     private boolean freeEscape;
+    private  int playerNum;
 
-    public Player(String name) {
+    public Player(String name, int playerNum) {
         this.name = name;
+        this.playerNum = playerNum;
         netWorth = 0;
         portfolio = new ArrayList<>();
         freeEscape = false;
@@ -18,6 +20,9 @@ public class Player {
 
     public String getName() {
         return name;
+    }
+    public int getPlayerNum() {
+        return playerNum;
     }
 
     public int getNetWorth() {
@@ -40,6 +45,11 @@ public class Player {
 
     public ArrayList<Property> getPortfolio() {
         return portfolio;
+    }
+    public void printPortfolio() {
+        for (int i = 0; i < portfolio.size(); i++) {
+            System.out.println("- " + portfolio.get(i));
+        }
     }
     public int getX() {
         return xPos;

@@ -4,11 +4,12 @@ public class Property {
     private String name;
     private int cost;
     private int rent;
-    private boolean isOwned;
+    private int owner;
     public Property(String name, int cost, int rent) {
         this.name = name;
         this.cost = cost;
         this.rent = rent;
+        owner = 0;
     }
 
     public String getName() {
@@ -23,13 +24,13 @@ public class Property {
     public void setRent(int num) {
         rent = num;
     }
-    public boolean isOwned() {
-        return isOwned;
+    public int getOwner() {
+        return owner;
     }
     public boolean buyProperty(Player player) {
         if (player.deductMoney(cost)) {
             player.addToPortfolio(this);
-            isOwned = true;
+            owner = player.getPlayerNum();
             return true;
         }
         return false;

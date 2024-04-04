@@ -17,6 +17,9 @@ public class Board {
     public Property[][] getBoard() {
         return board;
     }
+    public Setup getSetup() {
+        return setup;
+    }
 
     public Property getPointOnBoard(int x, int y) {
         return board[x][y];

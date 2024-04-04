@@ -27,9 +27,9 @@ public class Setup {
     public void initializePlayers() {
         playerList = new ArrayList<>();
         System.out.print("Player 1 Name: ");
-        Player p1 = new Player(scan.nextLine());
+        Player p1 = new Player(scan.nextLine(), 1);
         System.out.print("Player 2 Name: ");
-        Player p2 = new Player(scan.nextLine());
+        Player p2 = new Player(scan.nextLine(), 2);
         playerList.add(p1);
         playerList.add(p2);
     }
