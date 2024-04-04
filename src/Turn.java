@@ -70,7 +70,7 @@ public class Turn {
         // check to make sure the landed property is not empty or a corner.
         if (landedProperty != null && !landedProperty.getName().equals("X") && !landedProperty.getName().contains("GO") && !landedProperty.getName().contains("JAIL") && !landedProperty.getName().contains("PARKING")) {
             System.out.println(player.getName() + " landed on " + landedProperty.getName());
-            if (landedProperty.getOwner() != player.getPlayerNum()) {
+            if (landedProperty.getOwner() > 0 && landedProperty.getOwner() != player.getPlayerNum()) {
                 boolean paidRent = landedProperty.chargeRent(player);
                 if (paidRent) {
                     System.out.println(player.getName() + " paid rent for " + landedProperty.getName());
