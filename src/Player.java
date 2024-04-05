@@ -7,6 +7,8 @@ public class Player {
     private int xPos;
     private int yPos;
     private int railroadsOwned;
+    private boolean inJail;
+    private int turnsInJail;
     private boolean freeEscape;
     private  int playerNum;
 
@@ -30,6 +32,18 @@ public class Player {
     }
     public String toString() {
         return name;
+    }
+    public boolean inJail() {
+        return inJail;
+    }
+    public void setJail(boolean value) {
+        inJail = value;
+    }
+    public void incrementTurnsInJail() {
+        turnsInJail++;
+    }
+    public int getTurnsInJail() {
+        return turnsInJail;
     }
     public void setFreeEscape() {
         if (freeEscape == false) {

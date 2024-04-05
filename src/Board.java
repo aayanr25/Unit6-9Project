@@ -1,10 +1,8 @@
-import java.awt.image.ConvolveOp;
 import java.util.ArrayList;
 
 public class Board {
     private Property[][] board;
     private ArrayList<Property> allProperties;
-    private Turn game;
     private Setup setup;
 
     public Board() {

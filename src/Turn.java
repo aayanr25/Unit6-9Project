@@ -25,7 +25,12 @@ public class Turn {
                 } else {
                     this.otherPlayer = playerList.get(0);
                 }
-                menu();
+                if (!checkJail()) {
+                    pause(1000);
+                    menu();
+                } else {
+                    System.out.println(player.getName() + " is in jail!");
+                }
             }
         }
     }
@@ -72,6 +77,12 @@ public class Turn {
 
     private void handleLanding() {
         Property landedProperty = board.getPointOnBoard(player.getX(), player.getY());
+        if (landedProperty instanceof Jail) {
+            System.out.println("Just visiting jail!");
+        }
+        if (landedProperty.getName().contains("GO TO JAIL")) {
+            sendPlayerToJail();
+        }
         // check to make sure the landed property is not empty or a corner.
         if (landedProperty != null && !landedProperty.getName().equals("X") && !landedProperty.getName().contains("GO") && !landedProperty.getName().contains("JAIL") && !landedProperty.getName().contains("PARKING")) {
             System.out.println(player.getName() + " landed on " + landedProperty.getName());
@@ -130,6 +141,29 @@ public class Turn {
             System.out.println("Failed to pause the program.");
         }
     }
+
+    private void sendPlayerToJail() {
+        System.out.println(player.getName() + " must go to jail!");
+
+        player.setX(6);
+        player.setY(0);
+        player.setJail(true);
+
+        // handle any additional logic for a player going to jail
+
+    }
+    private boolean checkJail() {
+        if (player.inJail()) {
+            if (player.getTurnsInJail() == 3) {
+                return false;
+            } else {
+                player.incrementTurnsInJail();
+            }
+            return true;
+        }
+        return false;
+    }
+
 
 
     public Property getProperty(String propName) {
