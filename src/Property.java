@@ -35,8 +35,12 @@ public class Property {
         }
         return false;
     }
-    public boolean chargeRent(Player player) {
-        return player.deductMoney(rent);
+    public boolean chargeRent(Player player, Player otherPlayer) {
+         if (player.deductMoney(rent)) {
+             otherPlayer.addMoney(rent);
+             return true;
+         }
+         return false;
     }
 
 

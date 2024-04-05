@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="got player tokens on board">
+    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="started game logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Railroad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Railroad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn.java" afterDir="false" />
     </list>
@@ -102,7 +103,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712114195438</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="started game logic">
+      <option name="closed" value="true" />
+      <created>1712205108540</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712205108540</updated>
+    </task>
+    <task id="LOCAL-00009" summary="started game logic">
+      <option name="closed" value="true" />
+      <created>1712205349364</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712205349364</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +139,7 @@
     <MESSAGE value="board is done" />
     <MESSAGE value="move method" />
     <MESSAGE value="got player tokens on board" />
-    <option name="LAST_COMMIT_MESSAGE" value="got player tokens on board" />
+    <MESSAGE value="started game logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="started game logic" />
   </component>
 </project>

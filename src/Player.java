@@ -72,17 +72,40 @@ public class Player {
         for (int num = 0; num < roll; num++) {
             if (yPos == 0 && xPos < 6) {
                 xPos++;
+                if (checkForGo()) {
+                    passGo();
+                }
             }
             else if (xPos == 6 && yPos < 6) {
                 yPos++;
+                if (checkForGo()) {
+                    passGo();
+                }
             }
             else if (yPos == 6 && xPos > 0) {
                 xPos--;
+                if (checkForGo()) {
+                    passGo();
+                }
             }
             else if (xPos == 0 && yPos > 0) {
                 yPos--;
+                if (checkForGo()) {
+                    passGo();
+                }
             }
         }
+    }
+    private boolean checkForGo() {
+        if (xPos == 0 && yPos == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public void passGo() {
+        addMoney(200);
+        System.out.println("Passed Go! $200 added.");
     }
 
     public void addMoney(int deposit) {
@@ -112,9 +135,6 @@ public class Player {
         }
     }
 
-    public void passGo() {
-        netWorth += 200;
-    }
     public void addRailroad() {
         railroadsOwned++;
     }

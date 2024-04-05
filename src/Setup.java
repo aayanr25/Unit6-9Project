@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Setup {
-    private Board board;
     private Scanner scan;
     private ArrayList<Player> playerList;
 
@@ -21,9 +20,6 @@ public class Setup {
         return playerList.get(1);
     }
 
-    public Board getBoard() {
-        return board;
-    }
     public void initializePlayers() {
         playerList = new ArrayList<>();
         System.out.print("Player 1 Name: ");

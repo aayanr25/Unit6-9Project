@@ -12,10 +12,10 @@ public class Railroad extends Property {
     }
 
     @Override
-    public boolean chargeRent(Player player) {
-        int numOwned = player.getRailroadsOwned();
+    public boolean chargeRent(Player player, Player otherPlayer) {
+        int numOwned = otherPlayer.getRailroadsOwned();
         setRent(numOwned * getRent());
-        return super.chargeRent(player);
+        return super.chargeRent(player, otherPlayer);
     }
 
 }

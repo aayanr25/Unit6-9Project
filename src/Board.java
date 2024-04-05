@@ -22,7 +22,7 @@ public class Board {
     }
 
     public Property getPointOnBoard(int x, int y) {
-        return board[x][y];
+        return board[y][x];
     }
 
     public ArrayList<Property> getAllProperties() {
