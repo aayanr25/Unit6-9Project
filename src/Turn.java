@@ -80,6 +80,10 @@ public class Turn {
         if (landedProperty instanceof Jail) {
             System.out.println("Just visiting jail!");
         }
+        if (landedProperty.getName().contains("PARKING")) {
+            player.addMoney(100);
+            System.out.println("You landed on free parking! $100 added.");
+        }
         if (landedProperty.getName().contains("GO TO JAIL")) {
             sendPlayerToJail();
         }
@@ -89,6 +93,7 @@ public class Turn {
             if (landedProperty instanceof Railroad) {
                 Railroad railroad = (Railroad) landedProperty;
                 handleRailroadLanding(railroad);
+                handleBuy(railroad);
             } else {
                 if (landedProperty.getOwner() > 0 && landedProperty.getOwner() != player.getPlayerNum()) {
                     boolean paidRent = landedProperty.chargeRent(player, otherPlayer);
@@ -97,25 +102,31 @@ public class Turn {
                     } else {
                         System.out.println(player.getName() + " couldn't afford the rent for " + landedProperty.getName());
                         // need to add consequence here
+                        isGameOver = true;
+                        System.out.println(player.getName() + " is now bankrupt! " + otherPlayer.getName() + " has won the game!");
                     }
                 } else {
-                    if (landedProperty.getOwner() != player.getPlayerNum()) {
-                        System.out.println("Do you want to buy " + landedProperty.getName() + " for $" + landedProperty.getCost() + "? (y/n)");
-                        String input = scan.nextLine().toLowerCase();
-                        if (input.equals("y")) {
-                            boolean bought = landedProperty.buyProperty(player);
-                            if (bought) {
-                                System.out.println(player.getName() + " bought " + landedProperty.getName());
-                            } else {
-                                System.out.println("You don't have enough funds to buy " + landedProperty.getName() + ".");
-                            }
-                        } else if (input.equals("n")) {
-                            System.out.println(player.getName() + " chose not to buy " + landedProperty.getName() + ".");
-                        } else {
-                            System.out.println("Invalid input. Assuming you chose not to buy.");
-                        }
-                    }
+                    handleBuy(landedProperty);
                 }
+            }
+        }
+    }
+
+    private void handleBuy(Property landedProperty) {
+        if (landedProperty.getOwner() != player.getPlayerNum()) {
+            System.out.println("Do you want to buy " + landedProperty.getName() + " for $" + landedProperty.getCost() + "? (y/n)");
+            String input = scan.nextLine().toLowerCase();
+            if (input.equals("y")) {
+                boolean bought = landedProperty.buyProperty(player);
+                if (bought) {
+                    System.out.println(player.getName() + " bought " + landedProperty.getName());
+                } else {
+                    System.out.println("You don't have enough funds to buy " + landedProperty.getName() + ".");
+                }
+            } else if (input.equals("n")) {
+                System.out.println(player.getName() + " chose not to buy " + landedProperty.getName() + ".");
+            } else {
+                System.out.println("Invalid input. Assuming you chose not to buy.");
             }
         }
     }
@@ -144,6 +155,7 @@ public class Turn {
 
     private void sendPlayerToJail() {
         System.out.println(player.getName() + " must go to jail!");
+        System.out.println("3 turns until you're back.");
 
         player.setX(6);
         player.setY(0);
