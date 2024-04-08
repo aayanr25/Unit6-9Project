@@ -53,8 +53,16 @@ public class Player {
         }
     }
 
-    public boolean escapeJail() {
-        return false;
+    public boolean getFreeEscape() {
+        return freeEscape;
+    }
+
+    public void escapeJail() {
+        if (freeEscape && inJail) {
+            inJail = false;
+            setFreeEscape();
+        }
+        System.out.println("You used your get out of jail free card!");
     }
 
     public ArrayList<Property> getPortfolio() {
