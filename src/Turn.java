@@ -20,6 +20,9 @@ public class Turn {
         ArrayList<Player> playerList = board.getSetup().getPlayerList();
         while (!isGameOver) {
             for (int i = 0; i < playerList.size(); i++) {
+                if (isGameOver) {
+                    break;
+                }
                 this.player = playerList.get(i);
                 if (i == 0) {
                     this.otherPlayer = playerList.get(1);
@@ -40,6 +43,7 @@ public class Turn {
 
     private void menu() {
         chance = new Chance(player);
+        System.out.println();
         System.out.println("It's your turn, " + player.getName());
         System.out.println("Current net worth: $" + player.getNetWorth());
         board.printBoard();
@@ -60,7 +64,7 @@ public class Turn {
 
         } else if (input.equals("3")) {
             isGameOver = true;
-            System.out.println("Game over./n" + player.getName() + " net worth: " + player.getNetWorth());
+            System.out.println("Game over.\n" + player.getName() + " net worth: " + player.getNetWorth());
             System.out.println(otherPlayer.getName() + " net worth: " + otherPlayer.getNetWorth());
         }
         else {
