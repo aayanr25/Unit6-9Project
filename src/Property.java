@@ -27,6 +27,7 @@ public class Property {
     public int getOwner() {
         return owner;
     }
+
     public boolean buyProperty(Player player) {
         if (player.deductMoney(cost)) {
             player.addToPortfolio(this);

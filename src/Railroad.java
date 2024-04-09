@@ -2,7 +2,6 @@ public class Railroad extends Property {
 
     public Railroad(String name) {
         super(name, 250, 25);
-
     }
 
     @Override

@@ -134,7 +134,6 @@ public class Board {
         allProperties.add(0, new Railroad("Stillwell Avenue Station"));
         allProperties.add(0, new Property("Rocky's", 100, 5));
         allProperties.add(0, new Property("Toys-R-Us", 100, 5));
-
     }
 
     public void GamePiece() {
