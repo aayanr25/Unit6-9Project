@@ -40,10 +40,10 @@ public class Board {
                     cellContent = board[i][j].toString();
                 }
                 if (setup.getP1().getX() == j && setup.getP1().getY() == i) {
-                    cellContent += "  *P1*";
+                    cellContent += "  " + setup.getP1().getName().substring(0,3).toUpperCase();
                 }
                 if (setup.getP2().getX() == j && setup.getP2().getY() == i) {
-                    cellContent += "  ^P2^";
+                    cellContent += "  " + setup.getP2().getName().substring(0,3).toUpperCase();
                 }
                 if (property.getCost() == 0 && !(property.getName().equals("X"))) {
                     System.out.printf(colorCellFormat, cellContent);
@@ -113,19 +113,19 @@ public class Board {
     }
 
     private void initializePropList() {
-        allProperties = new ArrayList<>();
+        allProperties = new ArrayList<Property>();
         allProperties.add(0, new Property("World Trade Center", 600, 50));
         allProperties.add(0, new Property("JFK Airport", 600, 50));
-        allProperties.add (0, new Railroad("Grand Central Station"));
-        allProperties.add(0, new Property("Broadway", 50, 40));
+        allProperties.add(0, new Railroad("Grand Central Station"));
+        allProperties.add(0, new Property("Broadway", 550, 40));
         allProperties.add(0, new Property("Brooklyn Tech", 500, 40));
         allProperties.add(0, new Property("Brighton Boardwalk", 500, 40));
         allProperties.add(0, new Property("The Met", 450, 35));
         allProperties.add(0, new Railroad("Penn Station"));
         allProperties.add(0, new Property("Coney Island", 400, 30));
         allProperties.add(0, new Property("Bryant Park Library", 400, 30));
-        allProperties.add(0, new Property("Coney Island Aquarium", 300, 20));
-        allProperties.add(0, new Property("Rockefeller Plaza", 300, 20));
+        allProperties.add(0, new Property("Coney Island Aquarium", 350, 20));
+        allProperties.add(0, new Property("Rockefeller Center", 300, 20));
         allProperties.add(0, new Railroad("Atlantic Terminal"));
         allProperties.add(0, new Property("La Bagel", 250, 15));
         allProperties.add(0, new Property("Dave & Busters", 200, 10));

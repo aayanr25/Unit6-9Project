@@ -15,7 +15,7 @@ public class Player {
     public Player(String name, int playerNum) {
         this.name = name;
         this.playerNum = playerNum;
-        netWorth = 1500;
+        netWorth = 1000;
         portfolio = new ArrayList<>();
         freeEscape = false;
     }

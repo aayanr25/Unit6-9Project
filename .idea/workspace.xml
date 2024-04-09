@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="move method">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="logic for jail">
+    <list default="true" id="64503e36-8a67-43b6-86c6-95d51b69275d" name="Changes" comment="free parking, fixed bug with railroads.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712289286010</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="free parking, fixed bug with railroads.">
+      <option name="closed" value="true" />
+      <created>1712455280854</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712455280854</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +175,7 @@
     <MESSAGE value="working on game logic" />
     <MESSAGE value="passGo" />
     <MESSAGE value="logic for jail" />
-    <option name="LAST_COMMIT_MESSAGE" value="logic for jail" />
+    <MESSAGE value="free parking, fixed bug with railroads." />
+    <option name="LAST_COMMIT_MESSAGE" value="free parking, fixed bug with railroads." />
   </component>
 </project>

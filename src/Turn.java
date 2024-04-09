@@ -30,6 +30,7 @@ public class Turn {
                     menu();
                 } else {
                     System.out.println(player.getName() + " is in jail!");
+                    pause(1000);
                 }
             }
         }
@@ -38,28 +39,41 @@ public class Turn {
 
     private void menu() {
         System.out.println("It's your turn, " + player.getName());
+        System.out.println("Current net worth: $" + player.getNetWorth());
         board.printBoard();
         pause(1000);
         System.out.println("1. View your portfolio");
         System.out.println("2. Roll the dice and move");
-        System.out.print("Enter your choice: ");
+        System.out.println("3. End game");
+        System.out.print("Enter your choice (1, 2 or 3): ");
         String input = scan.nextLine();
         if (input.equals("1")) {
             player.printPortfolio();
             pause(2500);
+            System.out.println("Now rolling the dice...");
+            pause(500);
+            roll();
         } else if (input.equals("2")) {
-            int roll = getRoll();
-            System.out.println("You rolled a " + roll);
-            player.move(roll);
-            pause(1000);
-            board.printBoard();
-            handleLanding();
-        } else {
+            roll();
+        } else if (input.equals("3")) {
+            isGameOver = true;
+            System.out.println("Game over./n" + player.getName() + " net worth: " + player.getNetWorth());
+            System.out.println(otherPlayer.getName() + " net worth: " + otherPlayer.getNetWorth());
+        }
+        else {
             System.out.println("Invalid choice. Please choose again.");
             menu();
         }
     }
 
+    private void roll() {
+        int roll = getRoll();
+        System.out.println("You rolled a " + roll);
+        player.move(roll);
+        pause(1000);
+        board.printBoard();
+        handleLanding();
+    }
 
     private int getRoll() {
         d1 = (int) (Math.random() * 6) + 1;
