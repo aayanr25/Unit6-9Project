@@ -1,14 +1,13 @@
 public class Chance extends Property {
 
     Player player;
-    public Chance(String name, int cost, int rent, Player player) {
+    public Chance(Player player) {
         super("CHANCE", 0, 0);
         this.player = player;
     }
 
     public void chancePull() {
         int chance = (int) (Math.random() * 20 + 1);
-
         if (chance <= 3) {
             moveToGO();
         } else if (chance <= 10) {
@@ -23,22 +22,22 @@ public class Chance extends Property {
     }
 
     private void moveToGO() {
-        System.out.println("Advance to GO & Collect $200");
+        System.out.println("CHANCE CARD: Advance to GO & Collect $200");
         player.setY(0);
         player.setX(0);
     }
 
     private void getOutOfJailFree() {
-        if (player.getFreeEscape() == false) {
+        if (!player.getFreeEscape()) {
             player.setFreeEscape();
-            System.out.println("You got a get out of jail free card!");
+            System.out.println("CHANCE CARD: You got a get out of jail free card!");
         } else {
             System.out.println("You already got a get out of jail free card, sorry!");
         }
     }
 
     private void goForward() {
-        System.out.println("Move forward 3 spaces");
+        System.out.println("CHANCE CARD: Move forward 3 spaces");
         player.move(3);
     }
 
@@ -53,7 +52,7 @@ public class Chance extends Property {
             x = 100;
         }
 
-        System.out.println("Pay tax of $" + x);
+        System.out.println("CHANCE CARD: Pay tax of $" + x);
 
         player.deductMoney(x);
     }
@@ -69,7 +68,7 @@ public class Chance extends Property {
             x = 100;
         }
 
-        System.out.println("Get a sum of $" + x);
+        System.out.println("CHANCE CARD: " + player.getName() + " gained a sum of $" + x);
 
         player.addMoney(x);
     }

@@ -11,6 +11,7 @@ public class Turn {
     private Player otherPlayer;
     private Scanner scan;
     private Board board;
+    private Chance chance;
 
 
     public Turn() {
@@ -38,6 +39,7 @@ public class Turn {
 
 
     private void menu() {
+        chance = new Chance(player);
         System.out.println("It's your turn, " + player.getName());
         System.out.println("Current net worth: $" + player.getNetWorth());
         board.printBoard();
@@ -55,6 +57,7 @@ public class Turn {
             roll();
         } else if (input.equals("2")) {
             roll();
+
         } else if (input.equals("3")) {
             isGameOver = true;
             System.out.println("Game over./n" + player.getName() + " net worth: " + player.getNetWorth());
@@ -64,6 +67,7 @@ public class Turn {
             System.out.println("Invalid choice. Please choose again.");
             menu();
         }
+        pause(1000);
     }
 
     private void roll() {
@@ -124,11 +128,16 @@ public class Turn {
                 }
             }
         }
+        int num = (int) (Math.random() * 6) + 1;
+        if (num == 1) {
+            chance.chancePull();
+            pause(1500);
+        }
     }
 
     private void handleBuy(Property landedProperty) {
         if (landedProperty.getOwner() != player.getPlayerNum()) {
-            System.out.println("Do you want to buy " + landedProperty.getName() + " for $" + landedProperty.getCost() + "? (y/n)");
+            System.out.print("Do you want to buy " + landedProperty.getName() + " for $" + landedProperty.getCost() + "? (y/n) ");
             String input = scan.nextLine().toLowerCase();
             if (input.equals("y")) {
                 boolean bought = landedProperty.buyProperty(player);
@@ -162,7 +171,6 @@ public class Turn {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // set the interrupt flag
             System.out.println("Failed to pause the program.");
         }
     }
@@ -199,10 +207,6 @@ public class Turn {
             }
         }
         return null;
-    }
-
-    private void chance(Player player) {
-
     }
 
 

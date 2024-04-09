@@ -40,10 +40,10 @@ public class Board {
                     cellContent = board[i][j].toString();
                 }
                 if (setup.getP1().getX() == j && setup.getP1().getY() == i) {
-                    cellContent += "  " + setup.getP1().getName().substring(0,3).toUpperCase();
+                    cellContent += "  " + setup.getP1().getName().substring(0,1).toUpperCase();
                 }
                 if (setup.getP2().getX() == j && setup.getP2().getY() == i) {
-                    cellContent += "  " + setup.getP2().getName().substring(0,3).toUpperCase();
+                    cellContent += "  " + setup.getP2().getName().substring(0,1).toUpperCase();
                 }
                 if (property.getCost() == 0 && !(property.getName().equals("X"))) {
                     System.out.printf(colorCellFormat, cellContent);
