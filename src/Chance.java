@@ -10,7 +10,7 @@ public class Chance extends Property {
         int chance = (int) (Math.random() * 20 + 1);
 
         if (chance <= 3) {
-            moveToGo();
+            moveToGO();
         } else if (chance <= 10) {
             goForward();
         } else if (chance <= 14) {
